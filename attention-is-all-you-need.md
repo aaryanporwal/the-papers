@@ -41,4 +41,20 @@ Instead of one huge attention op, split into heads. My current interpretation: h
 
 ### positional encoding
 
-Sine/cosine positions are elegant but also slightly magical. Learned positions became c
+Sine/cosine positions are elegant but also slightly magical. Learned positions became common later. The important part is not the exact encoding, it is that [[attention]] itself is permutation invariant unless we inject order.
+
+## links outward
+
+- [[gpt3-few-shot-learners]]: decoder-only scaling + in-context learning makes transformers feel like a product surface
+- [[flashattention]]: same equation, different system story
+- [[vit-image-worth-16x16-words]]: patches become tokens, image modeling becomes sequence modeling
+- [[chain-of-thought-prompting]] and [[deepseek-r1]]: reasoning traces riding on the transformer substrate
+- [[mixtral-of-experts]]: sparse FFN experts inside the same block pattern
+
+## doubts / TODO
+
+- Need to re-read the exact masking setup in decoder self-attention.
+- Is there a clean note somewhere on why additive attention lost to dot-product attention? come back later.
+- The paper's training details matter less to me rn, but label smoothing probably deserves a separate [[optimization]] note.
+
+Tiny personal takeaway: this is not just "attention good". It is "remove sequential dependency, expose compute, and use attention as soft content-addressed memory." That phrase is maybe too neat but useful.
