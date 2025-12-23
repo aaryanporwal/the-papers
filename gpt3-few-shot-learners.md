@@ -22,4 +22,21 @@ The examples in the prompt become a temporary dataset. I keep wanting to call it
 
 Still, the user-facing effect is huge:
 
-- no training loop for every 
+- no training loop for every task
+- prompt engineering becomes a real thing, for better/worse
+- benchmark evals get blurry because task descriptions matter a lot
+
+## doubts
+
+The paper is impressive but also pre-[[RLHF]]. Raw LM behavior is not aligned to helpful instruction following. That is why [[instructgpt-rlhf]] matters so much: same base capability, different objective at the interface.
+
+I also want to understand how much of GPT-3's few-shot behavior is memorized task format vs genuine abstraction. afaik still unsettled.
+
+## connections
+
+- [[chain-of-thought-prompting]] extends the prompt interface by adding reasoning traces
+- [[rag-knowledge-intensive-nlp]] handles factual gaps with external memory instead of just parametric memory
+- [[lora]] later makes task adaptation cheap when prompting is not enough
+- [[deepseek-r1]] shows reasoning can be pushed by RL on top of this general substrate
+
+Personal note: this is where language models stop feeling like classifiers and start feeling like strange programmable text engines.
