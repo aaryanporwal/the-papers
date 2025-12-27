@@ -20,4 +20,18 @@ But this note needs the [[chinchilla]] correction: the original direction overfa
 
 ## why it matters
 
-Be
+Before this, "train a bigger transformer" could sound like brute-force optimism. After this, scaling becomes a roadmap. [[gpt3-few-shot-learners]] is almost the cultural proof point.
+
+## things I keep mixing up
+
+- compute-limited vs data-limited regimes
+- irreducible loss term vs reducible power-law part
+- whether downstream abilities follow the same smoothness as pretraining loss (not exactly)
+
+## reaction
+
+There is a slightly dangerous vibe here: smooth loss curves seduce people into believing all progress is predictable. But capabilities can still appear abruptly from our measurement POV. The loss may be smooth while usefulness is lumpy.
+
+Links: [[attention-is-all-you-need]], [[chinchilla]], [[mixtral-of-experts]], [[deepseek-r1]].
+
+TODO: add equation details later; rn the conceptual takeaway matters more than exponents.
