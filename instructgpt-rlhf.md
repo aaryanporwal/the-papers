@@ -22,4 +22,19 @@ The model gets smaller than GPT-3 but feels more useful. That is the whole point
 
 ## reaction
 
-This is the bridge from [[gpt3-few-shot-learners]] to ChatGPT-style products. Raw next-token prediction is not enou
+This is the bridge from [[gpt3-few-shot-learners]] to ChatGPT-style products. Raw next-token prediction is not enough b/c the user wants help, not a plausible continuation of internet text.
+
+But [[RLHF]] also introduces weirdness: reward hacking, over-politeness, refusal style, hidden preference biases. It makes models usable and also shapes their personality.
+
+## links
+
+- [[dpo]] simplifies preference optimization later, removing explicit RL loop
+- [[lets-verify-step-by-step-prm]] uses process-level feedback for reasoning tasks
+- [[deepseek-r1]] pushes RL more directly for reasoning behavior
+- [[chain-of-thought-prompting]] changes what users ask the model to emit
+
+## questions
+
+How much does the SFT stage matter vs reward optimization? Need better intuition. Also PPO details are still fuzzy to me, esp KL penalty against the reference model.
+
+Personal shorthand: pretraining gives broad competence; RLHF changes the affordance surface.
