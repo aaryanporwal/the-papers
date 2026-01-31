@@ -17,4 +17,14 @@ Do [[diffusion]] in a compressed latent space instead of pixel space, then condi
 - text conditioning steers generation
 - cross-attention connects prompt tokens to image features
 
-T
+This is where [[attention]] shows up inside image generation, not just language.
+
+## why latent matters
+
+Pixel diffusion is expensive. Latent diffusion keeps perceptual structure while reducing spatial cost. That unlocks consumer-ish hardware and the whole Stable Diffusion explosion.
+
+## reaction
+
+The paper feels like a systems paper disguised as a generative modeling paper. The algorithmic idea is diffusion, but the practical leap is moving the expensive process into the right representation.
+
+Links to [[clip]] 
