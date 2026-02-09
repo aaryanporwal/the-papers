@@ -18,4 +18,21 @@ This is a different path from just scaling [[gpt3-few-shot-learners]]. External 
 
 ## mechanism
 
-Retriever finds passages from a corpus, generator consumes query + passages. The paper variants differ in whether retrieved docs are fixed pe
+Retriever finds passages from a corpus, generator consumes query + passages. The paper variants differ in whether retrieved docs are fixed per sequence or per token.
+
+Dense Passage Retrieval is the retrieval side I need to revisit. The generator is BART in the original paper, not a modern chat model, but the pattern is everywhere now.
+
+## reactions
+
+RAG is conceptually simple and operationally annoying. Chunking, embeddings, stale indexes, eval, citations, context packing... all the boring stuff becomes the product.
+
+Still, the central distinction is useful:
+
+- parametric memory = inside weights
+- non-parametric memory = retrieve from corpus
+
+## links
+
+[[retrieval]], [[attention]], [[react-reasoning-acting]], [[gpt3-few-shot-learners]].
+
+TODO: make a note on when RAG fails: bad recall, distractor docs, synthesis errors, and false confidence.
