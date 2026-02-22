@@ -18,4 +18,19 @@ This is very practical [[finetuning]] tech for [[transformers]].
 
 ## why I care
 
-[[gpt3-few-shot-learners]] says prompting can adapt behavior, but prompts are not always enough. [[lora]] gives a middl
+[[gpt3-few-shot-learners]] says prompting can adapt behavior, but prompts are not always enough. [[lora]] gives a middle path: specialize without full finetuning cost.
+
+## notes
+
+- often applied to attention projection matrices
+- rank controls capacity/cost
+- storage becomes tiny adapters instead of full model copies
+- works b/c task-specific updates seem low intrinsic-rank
+
+## questions
+
+Why does low-rank adaptation work so well across so many tasks? Is it about pretrained representations already having most directions available? Need a mechanistic note.
+
+Connects to [[dpo]] and [[RLHF]] when preference tuning needs to be parameter-efficient.
+
+Small reaction: this is one of those papers whose importance is measured by how many repos quietly depend on it.
