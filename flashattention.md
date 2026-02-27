@@ -14,4 +14,14 @@ Same exact [[attention]] result, but compute it with IO-aware tiling so the bott
 
 ## why it matters
 
-Naive attention materializes the N x N matrix. For long sequences this is memory traffic hell. [[flashattention]] fuses operations and tiles
+Naive attention materializes the N x N matrix. For long sequences this is memory traffic hell. [[flashattention]] fuses operations and tiles through SRAM, keeping numerically stable softmax online.
+
+This is downstream of [[attention-is-all-you-need]] but feels like a hardware reality check: asymptotic FLOPs are not the whole story.
+
+## takeaway
+
+Memory movement is the enemy. The algorithmic math did not change; the schedule did.
+
+Links: [[transformers]], [[scaling laws]], [[vit-image-worth-16x16-words]].
+
+Question: revisit FlashAttention-2 later. Also I should learn the online softmax derivation instead of handwaving it.
