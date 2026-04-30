@@ -31,4 +31,17 @@ GRPO detail: group-based relative optimization instead of a full critic? I need 
 
 Maybe the big lesson is not "RL solves reasoning" but "verifiable domains provide enough signal for RL to shape behavior." Math/code are special because answers can be checked. Open-ended tasks are harder.
 
-Also there is a weird loop: [[chain-of-thought-pro
+Also there is a weird loop: [[chain-of-thought-prompting]] made visible reasoning useful, [[lets-verify-step-by-step-prm]] made steps supervisable, [[deepseek-r1]] makes RL-generated traces feel product-relevant.
+
+## emotional note
+
+This paper made the field feel unstable again. In a good way? maybe. The assumption that only closed labs could push frontier reasoning got weaker overnight.
+
+## TODO
+
+- verify exact R1-Zero vs R1 training recipe
+- understand GRPO math, not just blog-summary version
+- compare with o-series style hidden reasoning, if public info ever becomes clear
+- separate benchmark gains from vibes
+
+Final sticky line: reasoning models are not just bigger chat models; they are trained to spend computation at inference time in a more deliberate way.
